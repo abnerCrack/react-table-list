@@ -1,8 +1,8 @@
 // 统计组件 分页器组件
 
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 
-export default class Footer extends Component {
+export default class Footer extends PureComponent {
     render() {
         return (
             <div className="table-footer"></div>

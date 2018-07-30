@@ -1,17 +1,30 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import RowContainer from './row-container'
+
+
 // Table 组件 Content层
-class RowContainerList extends Component {
+class RowContainerList extends PureComponent {
 
   componentDidMount(){
-    console.log('%c    RowContainerList Did Mount    ','background:#f39c12;color:#fff');
+    // console.log('%c    RowContainerList Did Mount    ','background:#f39c12;color:#fff');
   }
   render() {
-    const { tables } = this.props;
+    const { tables,tableHeader,headerComponents=[],columnComponents=[],rowComponents=[]} = this.props;
     return (
         <div className="row-container-list">
+          { this.props.children }
+            <RowContainer  {...this.props} 
+              components = {headerComponents}
+              prefix = 'table-header' 
+              key={`table-header`}  
+              row = {this.props.tableHeader} 
+              key={`row-header`}/>
             {/* 少一点魔法 包一层 div 兼容 React 15版本 */}
-            { tables.map(( row, index ) => <RowContainer {...this.props} row={row} key={`row-${index}`}></RowContainer>)}
+            { tables.map(( row, index ) => <RowContainer 
+              {...this.props} 
+              row={row} 
+              components = {columnComponents}
+              key={`row-${index}`}/>)}
         </div>
        
     );

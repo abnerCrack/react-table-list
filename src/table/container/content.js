@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import RowContainerList from '../components/content/row-container-list'
 
 // Table 组件 Content层
-class Content extends Component {
+class Content extends PureComponent {
 
   componentDidMount(){
-    console.log('%c    Table Did Mount    ','background:#e74c3c;color:#fff');
+    // console.log('%c    Table Did Mount    ','background:#e74c3c;color:#fff');
   }
   render() {
     return (

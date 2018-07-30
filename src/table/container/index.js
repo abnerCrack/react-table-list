@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import Content from './content'
 import Header from './header'
 import Footer from './footer'
 
-export default class Table extends Component {
+export default class Table extends PureComponent {
     render() {
         return (
             <div className = 'react-table'>

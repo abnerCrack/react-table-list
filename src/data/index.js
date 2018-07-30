@@ -86,7 +86,7 @@ export const table = {
             { type: 'checkbox', key: 'checkbox', value: false },
 
             { type: 'text', key: 'name', value: '杨晓蓓' },
-            { type: 'text', key: 'phone', value: 18888888888 },
+            { type: 'text', key: 'phone', value: '手机号' },
             { type: 'text', key: 'mail', value: 'aaaaaaaa@bb.com' },
             { type: 'text', key: 'seniority', value: 3 },
             { type: 'text', key: 'company', value: '北京云计算股份' },

@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-class Text extends Component {
+import React, { PureComponent } from 'react';
+class Text extends PureComponent {
   render() {
     const { value } = this.props;
     return (

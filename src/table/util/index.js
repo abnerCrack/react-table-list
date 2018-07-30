@@ -74,8 +74,7 @@ const isTypeEqual = (component1, component2) => {
   return false;
 }
 
-
-export function mergeAndSortChildren(defaultChildren, _children, _externalsChildren, _parentProps, defaultOrder = 1) {
+export function mergeAndSortChildren(defaultChildren, _children, _externalsChildren = [], _parentProps, defaultOrder = 1) {
   const children = React.Children.toArray(_children);
   const externalsChildren = React.Children.toArray(_externalsChildren);
   const parentProps = { ..._parentProps };

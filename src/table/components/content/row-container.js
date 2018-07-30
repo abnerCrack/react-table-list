@@ -1,10 +1,10 @@
 
 
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { mergeAndSortChildren } from '../../util'
 import Row from '../../components/content/row'
 function noop() { }
-class RowContainer extends Component {
+class RowContainer extends PureComponent {
     constructor(props){
         super(props)
         this._ref = React.createRef();
@@ -15,7 +15,7 @@ class RowContainer extends Component {
         handleClick: noop,
     }
     componentDidMount() {
-        console.log('%c    RowContainer Did Mount    ', 'background:#2ecc71;color:#fff');
+        // console.log('%c    RowContainer Did Mount    ', 'background:#2ecc71;color:#fff');
     }
     getDefaultChildren() {
         return [
@@ -27,7 +27,9 @@ class RowContainer extends Component {
         ];
     }
     getChildren() {
-        const children = React.Children.toArray(this.props.children);
+        // const { rowComponents =[] } = this.props;
+        // const children = React.Children.toArray(this.props.children);
+        const children = []
         // 是否屏蔽默认 row组件
         const defaultChildren = this.props.disableDefultRow ? [] : this.getDefaultChildren();
         // 扩展类组件 传入方式待定
@@ -36,7 +38,7 @@ class RowContainer extends Component {
     }
     render() {
         const children = this.getChildren()
-        
+        // console.log(this.props)
         return (
             <ul className="row-container"
                 ref = {this._ref}
