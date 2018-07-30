@@ -5,7 +5,7 @@ import { tables } from './data'
 import Dates from './table/components/common/date'
 import CardInfo from './table/components/common/cardInfo'
 import Text from './table/components/common/text'
-import './index.css'
+import './index.scss'
 // console.log()
 class App extends Component {
   handleRowClick= ()=>{
@@ -31,17 +31,20 @@ class App extends Component {
         // 长串  /  滚动条
         // 可排序
         // 搜索高亮 组价内部是否启用高亮
-        disableDefultRow = {true}
-        disableDefultColumn = {true}
+        // disableDefultRow = {true}
+        // disableDefultColumn = {true}
         tables = {tables}
         >
         {/* <CardInfo/> */}
-        <Row>
+        {/* <Row> */}
           {/* <Column> */}
             {/* <Dates/> */}
             {/* <Name/> */}
           {/* </Column> */}
-        </Row>
+        
+        {/* </Row> */}
+
+
       </Table>
     );
   }

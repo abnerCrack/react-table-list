@@ -2,24 +2,21 @@ import React, { Component } from 'react';
 import Column from './column'
 import { mergeAndSortChildren } from '../../util'
 import Text from '../common/text'
-class Checkbox extends Component {
-    render() {
-        return <input type="checkbox" name="" id="" />
-    }
-}
+import Checkbox from '../common/checkbox'
+import Placeholder from '../common/placeholder'
 export default class Row extends Component {
     componentDidMount(){
         console.log('%c    Row Did Mount    ','background:#3498db;color:#fff');
     }
     getDefaultChildren() {
         return [
-            <Column key = {0.2}>
-                <Checkbox
-                        {...this.props}
-                        key="checkbox"
-                        order={0}
-                    />
-            </Column>
+
+            //     <Checkbox
+            //             {...this.props}
+            //             key="checkbox"
+            //             order={0}
+            //         />
+     
         ];
     }
     getExternalsChildren() {
@@ -27,7 +24,7 @@ export default class Row extends Component {
         // 解析默认数据类型
         // todo 增加 子节点特殊字段类型解析
         return row.map((column, index) => <Column column= {column} order = {index}  key = {`column-${index}`}>
-            <Text {...column}/>
+            {  <Placeholder order = {index} {...column}/> }
         </Column>)
     }
     getChildren() {
