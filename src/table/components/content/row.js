@@ -23,7 +23,7 @@ export default class Row extends PureComponent {
         const { row ,components} = this.props;
         // 解析默认数据类型
         // todo 增加 子节点特殊字段类型解析
-        return row.map((column, index) => <Column column= {column} order = {index}  key = {`column-${index}`}>
+        return row.map((column, index) => <Column prefix = {column.type} column= {column} order = {index}  key = {`column-${index}`}>
             {  <Placeholder components = {components}   order = {index} {...column}/> }
         </Column>)
     }

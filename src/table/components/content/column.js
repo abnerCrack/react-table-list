@@ -6,9 +6,9 @@ class Column extends Component {
   }
   
   render() {
-    const { column } = this.props;
+    const { column,prefix } = this.props;
     return (
-      <li className="column">
+      <li className={`${prefix}-column column`}>
         <div className="content">
            {this.props.children}
         </div>
