@@ -1,0 +1,33 @@
+Table - 容器
+
+RowContainerList    - 遍历 所有组件
+
+RowContainer        - 包含 row 和 cardInfo 组件
+
+Row                 - 包含 Column 组件
+
+Column              - 内容组件容器
+
+内容组件             - 字段级组件
+
+
+Todos 
+
+    API设计
+        事件
+        组件联动
+        数据传递
+
+    固定列
+    可视区渲染
+
+    Header
+        自定义button
+        自定义设置
+
+    Table(content)
+
+    Footer
+        页脚切换
+        总计
+    
