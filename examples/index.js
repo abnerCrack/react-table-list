@@ -9,7 +9,9 @@ import Dates from '../src/table/components/common/date'
 import CardInfo from '../src/table/components/common/cardInfo'
 import '../src/index.scss'
 import Checkbox from '../src/table/components/common/checkbox'
+// import Texts from '../src/table/components/common/text.1'
 // console.log()
+import Box from '../src/table/components/common/checkbox'
 class App extends PureComponent {
   handleRowClick= ()=>{
   }
@@ -26,6 +28,9 @@ class App extends PureComponent {
   render() {
 
     return (
+
+
+
       <Table
         /*
           1.数据源中有组件未传入 控制台会提示并且自动转换为Text组件
@@ -38,9 +43,11 @@ class App extends PureComponent {
 
         // == 行扩展组件 == (传入组件类,名称对应源数据type)
         // rowComponents= {{Text,Checkbox}} 
+        // rowComponents= {{Text}} 
+
 
         // == 列扩展组件 == (传入组件类,名称对应源数据type)
-        // columnComponents= {{Text,Checkbox}} 
+        // columnComponents= {{Text}} 
 
         // == 自定义事件 (自己定义自己组件内部接收))==
         // handleTextClick = {this.handleRowClick}
@@ -50,7 +57,7 @@ class App extends PureComponent {
         // 表格总数
         total = {table.tables.length}   
         capacity =  {15}
-        totalCurrent = {1}
+        // defaultCurrent = {1}
 
         // viewport  true false 是否在可视区范围   长串  /  滚动条
 

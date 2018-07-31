@@ -1,0 +1,113 @@
+.react-checkbox__wraper {
+  display: inline-block;
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+  height: 16px;
+  color: #b8dbff;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.react-checkbox__display {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #b8dbff;
+  transition: background-color .1s ease;
+  transition-delay: 0.05s;
+}
+
+@keyframes wobble {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+
+  40% {
+    transform: scale(1.1, 0.9) rotate(5deg);
+  }
+
+  70% {
+    transform: scale(0.9, 1.1) rotate(-3deg);
+  }
+
+  80% {
+    transform: scale(1.05, 0.95) rotate(1deg);
+  }
+
+  to {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+
+// .preload * {
+//   animation-duration: 0s !important;
+// }
+
+.react-checkbox__wraper {
+  user-select: none;
+  input {
+    display: none;
+  }
+  .react-checkbox__display {
+    &:hover{
+      transition-delay: 0.05s;
+      border: 1px solid #1687d9;
+    }
+    border-radius: 2px;
+    // opacity: 0.9;
+    &:before {
+      transition: width .05s linear;
+      transition-delay: .1s;
+      transform: rotate(45deg) translateX(5px) translateY(4px);
+    }
+    &:after {
+      transition: width .1s linear;
+      transition-delay: 0s;
+      content: "";
+      position: absolute;
+      transform-origin: 0 100%;
+      width: 0;
+      border-color: rgb(22, 135, 217);
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      transform: rotate(-45deg) translateX(-3px) translateY(12px)
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      transform-origin: 0 100%;
+      border-color: rgb(22, 135, 217);
+      width: 0;
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      transform: rotate(45deg) translateX(5px) translateY(4px);
+    }
+  }
+  input {
+    &:checked + .react-checkbox__display {
+      border: 1px solid #fff;
+      background-color: #fff;
+      transition-delay: 0s;
+      animation-name: wobble;
+      animation-duration: .3s;
+      animation-timing-function: ease;
+      &:before {
+        width: 7px;
+        transition-delay: 0s;
+      }
+      &:after {
+        width: 11px;
+        transition-delay: 0.05s;
+      }
+    }
+    &:disabled + .react-checkbox__display {
+      opacity: 0.5;
+      + span {
+        opacity: 0.5;
+      }
+    }
+  }
+}
