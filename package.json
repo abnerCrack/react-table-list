@@ -1,6 +1,6 @@
 {
-    "name": "react-flex-table",
-    "version": "1.0.0",
+    "name": "react-table-list",
+    "version": "0.0.1",
     "description": "",
     "main": "lib/index.js",
     "scripts": {
@@ -18,7 +18,7 @@
     },
     "license": "ISC",
     "repository": {
-        "url": "https://github.com/abnercrack/react-flex-table.git"
+        "url": "https://github.com/abnercrack/react-table-list.git"
     },
     "dependencies": {
         "@types/rc-select": "^5.9.31",
@@ -60,7 +60,7 @@
         }
     },
     "bugs": {
-        "url": "https://github.com/abnercrack/react-flex-table/issues"
+        "url": "https://github.com/abnercrack/react-table-list/issues"
     },
-    "homepage": "https://github.com/abnercrack/react-flex-table#readme"
+    "homepage": "https://github.com/abnercrack/react-table-list#readme"
 }
