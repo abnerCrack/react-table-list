@@ -1,66 +1,69 @@
 {
-    "name": "react-table-list",
-    "version": "0.0.1",
-    "description": "",
-    "main": "lib/index.js",
-    "scripts": {
-        "start": "webpack-dev-server",
-        "test": "jest",
-        "compile": "babel src --out-dir lib --copy-files",
-        "build": "npm run rm && npm run compile",
-        "rm": "rm -rf ./lib/*",
-        "prepublish": "npm run build",
-        "commit": "git-cz"
-    },
-    "author": {
-        "name": "abnercrack",
-        "email": "1129187719@qq.com"
-    },
-    "license": "ISC",
-    "repository": {
-        "url": "https://github.com/abnercrack/react-table-list.git"
-    },
-    "dependencies": {
-        "@types/rc-select": "^5.9.31",
-        "classnames": "^2.2.6",
-        "rc-pagination": "^1.16.5",
-        "rc-select": "^8.1.1",
-        "styled-components": "^2.2.3"
-    },
-    "devDependencies": {
-        "@talentui/cz-package-changelog": "^1.0.0",
-        "@talentui/tools": "^1.0.4",
-        "@talentui/webpack-config": "^1.1.0",
-        "babel-cli": "^6.26.0",
-        "babel-plugin-syntax-dynamic-import": "^6.18.0",
-        "babel-plugin-transform-decorators-legacy": "^1.3.4",
-        "babel-preset-env": "^1.6.0",
-        "babel-preset-react": "^6.24.1",
-        "babel-preset-stage-0": "^6.24.1",
-        "commitizen": "^2.9.6",
-        "es6-promise": "^4.0.5",
-        "jest": "^21.2.1",
-        "node-sass": "^4.5.3",
-        "react": "^16.4.1",
-        "react-dom": "^16.4.1",
-        "react-transition-group": "^2.0.2",
-        "uuid": "^2.0.2",
-        "webpack": "^3.8.1",
-        "webpack-dev-server": "^2.9.4"
-    },
-    "peerDependencies": {
-        "node-sass": "^4.5.3",
-        "react": "^16.4.1",
-        "react-dom": "^16.4.1",
-        "react-transition-group": "^2.0.2"
-    },
-    "config": {
-        "commitizen": {
-            "path": "./node_modules/@talentui/cz-package-changelog"
-        }
-    },
-    "bugs": {
-        "url": "https://github.com/abnercrack/react-table-list/issues"
-    },
-    "homepage": "https://github.com/abnercrack/react-table-list#readme"
+  "name": "react-table-list",
+  "version": "0.0.0-development",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "npm run rm && node ./compile/index.js",
+    "cm": "git-cz",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "test": "jest",
+    "compile": "babel src --out-dir lib --copy-files",
+    "build": "npm run rm && npm run compile",
+    "rm": "rm -rf ./lib/*",
+    "prepublish": "npm run build",
+  },
+  "author": {
+    "name": "abnercrack",
+    "email": "1129187719@qq.com"
+  },
+  "license": "ISC",
+  "repository": {
+    "url": "https://github.com/abnercrack/react-table-list.git"
+  },
+  "dependencies": {
+    "@types/rc-select": "^5.9.31",
+    "classnames": "^2.2.6",
+    "rc-pagination": "^1.16.5",
+    "rc-select": "^8.1.1",
+    "styled-components": "^2.2.3"
+  },
+  "devDependencies": {
+    "@talentui/cz-package-changelog": "^1.0.0",
+    "@talentui/tools": "^1.0.4",
+    "@talentui/webpack-config": "^1.1.0",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "commitizen": "^2.9.6",
+    "es6-promise": "^4.0.5",
+    "jest": "^21.2.1",
+    "node-sass": "^4.5.3",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-transition-group": "^2.0.2",
+    "uuid": "^2.0.2",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4",
+    "semantic-release": "^15.9.2"
+  },
+  "peerDependencies": {
+    "node-sass": "^4.5.3",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-transition-group": "^2.0.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/@talentui/cz-package-changelog"
+    }
+  },
+  "bugs": {
+    "url": "https://github.com/abnercrack/react-table-list/issues"
+  },
+  "homepage": "https://github.com/abnercrack/react-table-list#readme"
 }
