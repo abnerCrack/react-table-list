@@ -118,6 +118,9 @@ export function mergeAndSortChildren(defaultChildren, _children, _externalsChild
  * Temporary utility for generating the warnings
  */
 
+export function firstUpperCase(str){
+  return str.replace(/^\S/,function(s){return s.toUpperCase();})
+}
 export function deprecatedWarning(oldMethodCall, newMethodCall) {
   // eslint-disable-next-line no-console
   console.warn(`WARNING: ${oldMethodCall} will be deprecated soon! Please use ${newMethodCall} instead.`);

@@ -3,7 +3,7 @@ class Text extends PureComponent {
   render() {
     const { value } = this.props;
     return (
-        <div onClick = {this.props.handleTextClick} className="text">
+        <div style = {{background:'#f90'}} onClick = {this.props.handleTextClick} className="text">
            {value}
         </div>
     );

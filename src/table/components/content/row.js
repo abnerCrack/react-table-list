@@ -4,8 +4,10 @@ import { mergeAndSortChildren } from '../../util'
 import Text from '../common/text'
 import Checkbox from '../common/checkbox'
 import Placeholder from '../common/placeholder'
+import { Object } from 'core-js';
+import { firstUpperCase } from '../../util'
 export default class Row extends PureComponent {
-    componentDidMount(){
+    componentDidMount() {
         // console.log('%c    Row Did Mount    ','background:#3498db;color:#fff');
     }
     getDefaultChildren() {
@@ -19,12 +21,26 @@ export default class Row extends PureComponent {
             //         />
         ];
     }
+    // componentsHashMapping(_components) {
+    //     // Text,
+    //     const components = Object.create(null);
+    //     _components.map(component => {
+    //         const Type = firstUpperCase(component.props.type)
+    //         if(!Type) {
+    //             console.warn(`${component.type.name} 扩展组件type未定义,默认渲染为Text `)
+    //             return 
+    //         }
+    //         components[Type] = component
+    //     })
+    //     return components
+    // }
     getExternalsChildren() {
-        const { row ,components} = this.props;
+        const { row, components } = this.props;
+        // const newComponents = this.componentsHashMapping(components)
         // 解析默认数据类型
         // todo 增加 子节点特殊字段类型解析
-        return row.map((column, index) => <Column prefix = {column.type} column= {column} order = {index}  key = {`column-${index}`}>
-            {  <Placeholder components = {components}   order = {index} {...column}/> }
+        return row.map((column, index) => <Column prefix={column.type} column={column} order={index} key={`column-${index}`}>
+            {<Placeholder {...this.props} components={components} order={index} {...column} />}
         </Column>)
     }
     getChildren() {

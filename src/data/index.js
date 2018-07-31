@@ -19,6 +19,13 @@ export const table = {
             value: false
         },
         {
+            key: 'name',
+            sortable: false,
+            highlight: false,
+            type: 'text',
+            value: '姓名'
+        },
+        {
             key: 'phone',
             sortable: true,
             highlight: false,
@@ -60,13 +67,7 @@ export const table = {
             highlight: false,
             type: 'text',
             value: '时间'
-        }, {
-            key: 'name',
-            sortable: false,
-            highlight: false,
-            type: 'text',
-            value: '姓名'
-        },
+        }, 
     ],
 
     tables: [
