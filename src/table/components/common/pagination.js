@@ -25,7 +25,7 @@ export default class Checkbox extends PureComponent {
             showSizeChanger
             showLessItems
             selectComponentClass={Select}
-            showQuickJumper={{ goButton: <button>确定</button> }}
+            // showQuickJumper={{ goButton: <button>确定</button> }}
             defaultPageSize={capacity}
             defaultCurrent={totalCurrent}
             onShowSizeChange={handleCapacityChange}
