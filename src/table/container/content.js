@@ -11,7 +11,7 @@ class Content extends PureComponent {
     return (
       <div className="react-flex-table">
         <RowContainerList {...this.props}/>
-        <Footer {...this.props}/>
+        {/* <Footer {...this.props}/> */}
       </div>
     );
   }
