@@ -1,7 +1,7 @@
 
 import React, { PureComponent } from 'react';
-import 'rc-pagination/assets/index.css';
-import 'rc-select/assets/index.css';
+import './rc-pagination.scss';
+import './rc-select.scss';
 
 import Pagination from 'rc-pagination';
 import Select from 'rc-select';
