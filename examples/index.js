@@ -1,19 +1,17 @@
 
 import React, { PureComponent } from 'react';
-import {  Table, RowWraper,Column, Row } from './table'
-import TableContainer from './table/container'
-import {table} from './data'
-import RowContainer from './table/components/content/row-container'
+import {  Table, RowWraper,Column, Row } from '../src/table'
+import TableContainer from '../src/table/container'
+import { table } from '../src/data'
+import RowContainer from '../src/table/components/content/row-container'
 
-import Dates from './table/components/common/date'
-import CardInfo from './table/components/common/cardInfo'
-import Text from './table/components/common/text.1'
-import './index.scss'
-import Checkbox from './table/components/common/checkbox'
+import Dates from '../src/table/components/common/date'
+import CardInfo from '../src/table/components/common/cardInfo'
+import '../src/index.scss'
+import Checkbox from '../src/table/components/common/checkbox'
 // console.log()
 class App extends PureComponent {
   handleRowClick= ()=>{
-    alert(222)
   }
   handleRowMouseEnter= ()=>{
     
@@ -24,6 +22,7 @@ class App extends PureComponent {
   handleSelectSingle = ()=>{
 
   }
+
   render() {
 
     return (
@@ -50,14 +49,17 @@ class App extends PureComponent {
         // Todo
         // 表格总数
         total = {table.tables.length}   
-        // capacity 一页容量
+        capacity =  {15}
+        totalCurrent = {1}
+
         // viewport  true false 是否在可视区范围   长串  /  滚动条
 
         // column 是否支持排序
         // 增加 ref 回传  获取 index
         // 翻页
         // 300条
- 
+
+
 
         // 搜索高亮 组价内部是否启用高亮
 

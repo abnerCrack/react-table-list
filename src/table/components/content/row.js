@@ -8,7 +8,7 @@ import { Object } from 'core-js';
 import { firstUpperCase } from '../../util'
 export default class Row extends PureComponent {
     componentDidMount() {
-        // console.log('%c    Row Did Mount    ','background:#3498db;color:#fff');
+        console.log('%c    Row Did Mount    ','background:#3498db;color:#fff');
     }
     getDefaultChildren() {
         // const {components} = this.props

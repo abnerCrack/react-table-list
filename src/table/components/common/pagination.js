@@ -9,8 +9,6 @@ import Select from 'rc-select';
 
 
 
-
-
 const itemRender = (current, type, element) => {
     if (type === 'page') {
       return <a href={`#${current}`}>{current}</a>;
@@ -20,29 +18,19 @@ const itemRender = (current, type, element) => {
   
   
 export default class Checkbox extends PureComponent {
-    onShowSizeChange = (current, pageSize) => {
-        console.log(current);
-        console.log(pageSize);
-      }
-    
-      onChange = (current, pageSize) => {
-        console.log('onChange:current=', current);
-        console.log('onChange:pageSize=', pageSize);
-      }
-    
-    
     render() {
+        const { total, capacity, totalCurrent ,handleCapacityChange,handlePagingChange } = this.props;
         return <div className="pagination">
             <Pagination
             showSizeChanger
             showLessItems
             selectComponentClass={Select}
             showQuickJumper={{ goButton: <button>确定</button> }}
-            defaultPageSize={20}
-            defaultCurrent={5}
-            onShowSizeChange={this.onShowSizeChange}
-            onChange={this.onChange}
-            total={450}
+            defaultPageSize={capacity}
+            defaultCurrent={totalCurrent}
+            onShowSizeChange={handleCapacityChange}
+            onChange={handlePagingChange}
+            total={total}
             />
         </div>
     }

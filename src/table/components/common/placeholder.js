@@ -15,7 +15,7 @@ class Placeholder extends PureComponent {
     }
     get RealComponent() {
         const { type,name } = this.props;
-        console.log(this.props)
+        // console.log(this.props)
         const ComponentKey = firstUpperCase(type)
         if( this.Components[ComponentKey] ) {
             return this.Components[ComponentKey]

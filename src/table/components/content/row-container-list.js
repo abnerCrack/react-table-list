@@ -9,7 +9,7 @@ class RowContainerList extends PureComponent {
     // console.log('%c    RowContainerList Did Mount    ','background:#f39c12;color:#fff');
   }
   render() {
-    const { tables,tableHeader,headerComponents=[],columnComponents=[],rowComponents=[]} = this.props;
+    const { list,tableHeader,headerComponents=[],columnComponents=[],rowComponents=[]} = this.props;
     return (
         <div className="row-container-list">
           { this.props.children }
@@ -20,7 +20,7 @@ class RowContainerList extends PureComponent {
               row = {this.props.tableHeader} 
               key={`row-header`}/>
             {/* 少一点魔法 包一层 div 兼容 React 15版本 */}
-            { tables.map(( row, index ) => <RowContainer 
+            { list.map(( row, index ) => <RowContainer 
               {...this.props} 
               row={row} 
               components = {columnComponents}

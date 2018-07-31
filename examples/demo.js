@@ -1,9 +1,9 @@
 import React from 'react';
 import {render} from 'react-dom';
-import ReactComponentTemplate from '../src';
+import Example from './index';
 
 function start() {
-    render(<ReactComponentTemplate />, document.getElementById('app'));
+    render(<Example />, document.getElementById('app'));
 }
 
 start();

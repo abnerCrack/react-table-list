@@ -10,7 +10,7 @@ export default class Footer extends PureComponent {
                 <span className="total">
                 {`共${total}条`}
                 </span>
-                <Pagination/>
+                <Pagination {...this.props}/>
             </div>
         );
     }
