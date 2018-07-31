@@ -21,6 +21,9 @@
         "url": "https://github.com/abnercrack/react-flex-table.git"
     },
     "dependencies": {
+        "@types/rc-select": "^5.9.31",
+        "rc-pagination": "^1.16.5",
+        "rc-select": "^8.1.1",
         "styled-components": "^2.2.3"
     },
     "devDependencies": {

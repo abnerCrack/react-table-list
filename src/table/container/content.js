@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import RowContainerList from '../components/content/row-container-list'
-
+import Footer from './footer'
 // Table 组件 Content层
 class Content extends PureComponent {
 
@@ -11,6 +11,7 @@ class Content extends PureComponent {
     return (
       <div className="react-flex-table">
         <RowContainerList {...this.props}/>
+        <Footer {...this.props}/>
       </div>
     );
   }

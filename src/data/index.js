@@ -9,6 +9,33 @@ export const table = {
             color: '#f90',
         }
     },
+    buttonList:[
+
+        {
+            key: 'checkbox',
+            sortable: false,
+            highlight: false,
+            type: 'jumper',  // 置灰 
+            value: '跳转',
+            data:['http://baidu.com']
+        },
+        {
+            key: 'dropdown',
+            sortable: false,
+            highlight: false,
+            type: 'dropdown',  // 置灰 
+            value: '下拉',
+            data:[]
+        },
+        {
+            key: 'button',
+            sortable: false,
+            highlight: false,
+            type: 'button',  // 置灰 
+            value: '按钮',
+            data:[]
+        },
+    ],
     tableHeader: [
 
         {
