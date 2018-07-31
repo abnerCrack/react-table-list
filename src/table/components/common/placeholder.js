@@ -14,12 +14,13 @@ class Placeholder extends PureComponent {
         }
     }
     get RealComponent() {
-        const { type } = this.props;
+        const { type,name } = this.props;
+        console.log(this.props)
         const ComponentKey = firstUpperCase(type)
         if( this.Components[ComponentKey] ) {
             return this.Components[ComponentKey]
         }
-        console.warn(`${ComponentKey} 组件未定义,请传入对应组件 `)
+        console.warn(`${ComponentKey} 组件未定义,请传入对应组件,组件name为 ${name}`)
         return Text
     }
     render() {
