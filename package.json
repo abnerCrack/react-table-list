@@ -5,14 +5,13 @@
   "main": "lib/index.js",
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "npm run rm && node ./compile/index.js",
+    "build": "npm run rm && npm run compile",
     "cm": "git-cz",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "semantic-release": "semantic-release",
     "test": "jest",
     "compile": "babel src --out-dir lib --copy-files",
-    "build": "npm run rm && npm run compile",
     "rm": "rm -rf ./lib/*",
-    "prepublish": "npm run build",
+    "prepublish": "npm run build"
   },
   "author": {
     "name": "abnercrack",
