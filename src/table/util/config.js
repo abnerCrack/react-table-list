@@ -3,7 +3,7 @@ export const config = {
     components : {
         Custom: ''
     },
-    editable:false, // 默认为true 支持复选框
+    editable:false // 默认为true 支持复选框
 }
 
 //Todo
