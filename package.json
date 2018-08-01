@@ -2,24 +2,23 @@
   "name": "react-table-list",
   "version": "0.0.0-development",
   "description": "",
+  "repository": "https://github.com/abnerCrack/react-table-list.git",
   "main": "lib/index.js",
   "scripts": {
     "start": "webpack-dev-server",
     "build": "npm run rm && npm run compile",
     "cm": "git-cz",
-    "semantic-release": "semantic-release --prepare --publish",
+    "semantic-release": "semantic-release",
     "compile": "babel src --out-dir lib --copy-files",
     "rm": "rm -rf ./lib/*",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "travis-deploy-once": "travis-deploy-once"
   },
   "author": {
     "name": "abnercrack",
     "email": "1129187719@qq.com"
   },
   "license": "ISC",
-  "repository": {
-    "url": "https://github.com/abnercrack/react-table-list.git"
-  },
   "dependencies": {
     "@types/rc-select": "^5.9.31",
     "classnames": "^2.2.6",
@@ -48,7 +47,8 @@
     "uuid": "^2.0.2",
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.4",
-    "semantic-release": "^15.9.3"
+    "semantic-release": "^15.9.3",
+    "travis-deploy-once": "^5.0.1"
   },
   "peerDependencies": {
     "node-sass": "^4.5.3",
