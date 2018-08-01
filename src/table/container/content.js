@@ -4,6 +4,7 @@ import Footer from './footer'
 
 // Table 组件 Content层
 class Content extends PureComponent {
+
   constructor(props) {
     super(props)
     const { current = 1, capacity = 15, totalCurrent = 0 } = this.props;

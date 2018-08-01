@@ -5,33 +5,36 @@ import RowContainer from './row-container'
 // Table 组件 Content层
 class RowContainerList extends PureComponent {
 
-  componentDidMount(){
+  componentDidMount() {
     // console.log('%c    RowContainerList Did Mount    ','background:#f39c12;color:#fff');
   }
   render() {
-    const { list,tableHeader,headerComponents=[],columnComponents=[],rowComponents=[]} = this.props;
+    const { list, tableHeader, headerComponents = [], columnComponents = [], rowComponents = [] } = this.props;
     return (
-        <div className="row-container-list">
-          { this.props.children }
-            <RowContainer  {...this.props} 
-              components = {headerComponents}
-              prefix = 'table-header' 
-              key={`table-header`}  
-              row = {this.props.tableHeader} 
-              key={`row-header`}/>
-            {/* 少一点魔法 包一层 div 兼容 React 15版本 */}
-            { list.map(( row, index ) => <RowContainer 
-              {...this.props} 
-              row={row} 
-              components = {columnComponents}
-              key={`row-${index}`}/>)}
+
+      <div className="table-content-container">
+        <div className="table-header">
+          <RowContainer  {...this.props}
+            components={headerComponents}
+            prefix='table-header'
+            key={`table-header`}
+            row={this.props.tableHeader}
+            key={`row-header`} />
         </div>
-       
+        <div className="row-container-list">
+          {this.props.children}
+          {list.map((row, index) => <RowContainer
+            {...this.props}
+            row={row}
+            components={columnComponents}
+            key={`row-${index}`} />)}
+        </div>
+      </div>
     );
   }
 }
 
-export  { RowContainerList };
+export { RowContainerList };
 export default RowContainerList;
 
 
