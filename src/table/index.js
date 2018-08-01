@@ -1,5 +1,4 @@
 import Table from './container/content'
-
 import Row from './components/content/row'
 import Column from './components/content/column'
 
