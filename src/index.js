@@ -1,5 +1,5 @@
 
-// 默认导出
+// 默认导出 1
 import {  Table } from './table'
 
 export default Table

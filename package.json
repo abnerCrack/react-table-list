@@ -7,7 +7,7 @@
     "start": "webpack-dev-server",
     "build": "npm run rm && npm run compile",
     "cm": "git-cz",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "semantic-release": "semantic-release pre --debug && npm publish && semantic-release post",
     "compile": "babel src --out-dir lib --copy-files",
     "rm": "rm -rf ./lib/*",
     "prepublish": "npm run build"
