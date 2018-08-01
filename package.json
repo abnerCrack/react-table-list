@@ -7,11 +7,10 @@
     "start": "webpack-dev-server",
     "build": "npm run rm && npm run compile",
     "cm": "git-cz",
-    "semantic-release": "semantic-release pre --debug && npm publish && semantic-release post",
+    "semantic-release": "semantic-release --prepare --publish",
     "compile": "babel src --out-dir lib --copy-files",
     "rm": "rm -rf ./lib/*",
     "prepublish": "npm run build"
-
   },
   "author": {
     "name": "abnercrack",
@@ -26,6 +25,7 @@
     "classnames": "^2.2.6",
     "rc-pagination": "^1.16.5",
     "rc-select": "^8.1.1",
+    "semantic-release": "^15.9.3",
     "styled-components": "^2.2.3"
   },
   "devDependencies": {
@@ -48,7 +48,7 @@
     "uuid": "^2.0.2",
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.4",
-    "semantic-release": "^8.2.0"
+    "semantic-release": "^15.9.3"
   },
   "peerDependencies": {
     "node-sass": "^4.5.3",
